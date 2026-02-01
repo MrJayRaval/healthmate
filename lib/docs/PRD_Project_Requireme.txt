@@ -1,0 +1,298 @@
+Project Requirement Document (PRD)
+Project Title
+HealthMate AI – Intelligent Preventive Healthcare Platform
+
+1. Project Overview
+HealthMate AI is a cross-platform mobile application built using Flutter that provides AIpowered preventive healthcare assistance. The application focuses on symptom guidance,
+lifestyle tracking, personalized health insights, and community health trend analysis
+while ensuring user privacy and non-diagnostic medical support.
+The system leverages Supabase as the primary backend and database service, with optional
+Firebase Cloud Messaging for push notiﬁcations and analytics.
+
+2. Problem Statement
+Individuals often lack:
+Immediate access to veriﬁed symptom guidance
+Awareness of unhealthy lifestyle habits
+Data-driven preventive health insights
+Simple, multilingual health assistance
+This results in delayed action, poor health habits, and misinformation. HealthMate AI
+addresses these issues through AI-driven decision support and behavioral analytics.
+
+3. Objectives
+Provide AI-assisted symptom urgency guidance
+Enable lifestyle tracking and preventive alerts
+Deliver personalized health recommendations
+Analyze anonymized community trends
+Maintain secure and scalable infrastructure
+
+4. Target Users
+College students
+Working professionals
+Senior citizens
+Health-conscious individuals
+
+1/7
+
+Urban and semi-urban populations
+
+5. Core Features
+5.1 AI Symptom Guidance
+User selects or types symptoms.
+AI model predicts urgency level (Low / Medium / High).
+Displays general advice and next steps.
+Includes mandatory medical disclaimer.
+AI Type: NLP Classification + Rule Engine.
+
+5.2 Lifestyle Habit Tracker
+Tracks daily:
+Sleep hours
+Water intake
+Steps/activity
+Exercise duration
+Screen time
+Generates weekly AI insights.
+AI Type: Pattern Detection + Regression.
+
+5.3 Personalized Health Insights
+AI evaluates trends over time.
+Generates preventive recommendations.
+Health score system (0–100).
+
+5.4 Community Health Trends (Anonymized)
+Aggregated symptom trends.
+Weekly heat maps.
+No personal data exposed.
+
+5.5 AI Chat Assistant
+Natural language health tips.
+Multilingual support.
+Safety-restricted responses.
+
+5.6 Medication & Reminder System
+Local notifications.
+Custom schedules.
+Snooze & repeat options.
+
+2/7
+
+5.7 Dashboard & Visualization
+Graphs for sleep, water, and activity.
+Progress indicators.
+Health score charts.
+
+5.8 Authentication & User Profiles
+Email / Google login.
+Secure session management.
+Editable user preferences.
+
+6. Non-Functional Requirements
+Category
+
+Requirement
+
+Performance
+
+App response < 2 seconds
+
+Scalability
+
+Support 10k+ users
+
+Security
+
+Encrypted storage & HTTPS
+
+Reliability
+
+99% uptime
+
+Usability
+
+Intuitive UI/UX
+
+Privacy
+
+GDPR-style anonymization
+
+Accessibility
+
+Multilingual + large fonts
+
+7. Technical Architecture
+Frontend
+Flutter (Android / iOS)
+State Management: Riverpod / Provider
+Charts: fl_chart
+
+Backend
+Primary: Supabase
+Optional: Firebase (Notifications / Analytics)
+
+Database (Supabase PostgreSQL)
+Tables:
+users
+health_logs
+
+3/7
+
+symptoms_logs
+recommendations
+community_trends
+reminders
+
+Authentication
+Supabase Auth (Email + OAuth)
+
+Storage
+Supabase Storage for profile images and exports.
+
+8. AI & Machine Learning Components
+8.1 Symptom Classification Model
+NLP text preprocessing.
+Multi-label classification.
+Output: Urgency + Suggestion.
+Model Options:
+TensorFlow Lite
+ONNX Runtime
+Open-source LLM inference
+
+8.2 Habit Pattern Analysis
+Time-series anomaly detection.
+Rolling averages and thresholds.
+
+8.3 Recommendation Engine
+Rule-based + lightweight ML.
+Contextual suggestion generation.
+
+8.4 Chatbot NLP
+Prompt-controlled language model.
+Safety guardrails and topic restriction.
+
+9. API Design
+Example Endpoints
+POST /symptom/analyze
+Input: symptom list
+Output: urgency, advice
+POST /habit/log
+Input: sleep/water/activity
+
+4/7
+
+Output: success
+GET /insights
+Output: weekly AI insights
+GET /community/trends
+Output: aggregated stats
+
+10. Security & Privacy
+Role-based access control
+JWT authentication
+Encrypted database fields
+Anonymized analytics
+Medical disclaimer enforcement
+
+11. UI Screens
+1. Splash Screen
+2. Login / Signup
+3. Dashboard
+4. Symptom Checker
+5. Habit Tracker
+6. Insights & Charts
+7. AI Chat Assistant
+8. Community Trends
+9. Reminder Settings
+10. Profile & Preferences
+
+12. Development Phases
+Phase 1 – Core Setup
+Flutter project
+Supabase integration
+Authentication
+
+Phase 2 – Data Modules
+Habit logging
+Symptom logging
+Database schema
+
+Phase 3 – AI Modules
+Symptom classifier
+
+5/7
+
+Insight generator
+Chat assistant
+
+Phase 4 – Visualization
+Charts
+Health scores
+Trend maps
+
+Phase 5 – Notifications & Polish
+Reminder system
+Dark/light themes
+Accessibility adjustments
+
+13. Evaluation Metrics
+Metric
+
+Goal
+
+Accuracy
+
+80%+ classification
+
+Latency
+
+<2s response
+
+User Retention
+
+60% weekly
+
+Crash Rate
+
+<1%
+
+Data Privacy
+
+100% anonymization
+
+14. Risks & Mitigation
+Risk
+
+Mitigation
+
+Medical misuse
+
+Disclaimers & guidance only
+
+Data privacy issues
+
+Encryption & anonymization
+
+AI inaccuracies
+
+Confidence scoring
+
+Scalability
+
+Supabase scaling tiers
+
+15. Future Enhancements
+Wearable device integration
+Doctor teleconsultation
+Advanced predictive analytics
+Insurance & health records sync
+
+6/7
+
+16. Conclusion
+HealthMate AI is designed as a scalable, AI-enabled preventive healthcare platform
+combining real AI logic, secure cloud infrastructure, and user-centric design. The system
+emphasizes guidance, prevention, and data-driven insights rather than diagnosis, ensuring
+ethical compliance and real-world applicability while remaining technically feasible for rapid
+development and demonstration.
+
+7/7
+
+

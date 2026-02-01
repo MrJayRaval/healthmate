@@ -1,0 +1,313 @@
+HealthMate AI — UI/UX Design Speciﬁcation Document
+1. Product Vision
+HealthMate AI is a mobile-ﬁrst preventive healthcare app with a calm, trustworthy, and
+modern design language. The goal is to support users with daily habit tracking, AI symptom
+guidance, personalized health insights, and an empathetic AI chatbot through a visually calming,
+intuitive interface.
+
+2. UI/UX Principles
+These foundational design principles guide every screen and interaction:
+1. Clarity: Every screen communicates a clear purpose with minimal cognitive load.
+2. Calmness: Soft palette and whitespace to reduce user anxiety.
+3. Trust: Professional color combinations familiar to healthcare users.
+4. Consistency: Reuse components and spacing patterns to ease navigation.
+5. Accessibility: High contrast ratios, large tappable areas, clear typography.
+
+3. Color Palette (Healthcare Theme)
+Healthcare design best practices favor cool, calming and trust-evoking colors, especially
+blues, greens, and soft purples. See common palettes used in the industry: blue is widely
+used for trust & calm, green for healing & growth, and purple for creative, supportive
+experiences.
+
+Core Palette
+Purpose
+
+Color
+
+Primary Brand Color
+
+Deep Blue – #034C81
+
+Secondary Accent
+
+Sky Blue – #2CA3FA
+
+Health Growth Accent
+
+Health Green – #04E474
+
+1/6
+
+Purpose
+
+Color
+
+Supportive Accent
+
+Soft Purple – #8E7FFF (not in base kit but fits calming support)
+
+Background Light
+
+#FFFFFF (White)
+
+Neutral Text Dark
+
+#333333
+
+Neutral Text Light
+
+#6B7480
+
+Disabled / Surface
+
+#F5F7FA
+
+Usage Guidelines
+Primary Blue — Primary buttons, top bars.
+Sky Blue — Secondary buttons, highlights.
+Health Green — Success states, progress indicators.
+Soft Purple — Emotional feedback, AI chatbot sections.
+White & Neutrals — Main background, surface cards.
+
+4. Typography (Readable & Professional)
+Use sans-serif fonts that prioritize readability and clarity — a standard for healthcare and
+enterprise apps.
+
+Recommended Font Family
+Style
+
+Font
+
+Primary UI Font
+
+Inter (modern, legible for mobile)
+
+Alternative / Titles
+
+Montserrat (clear headings)
+
+Body Text
+
+Inter Regular
+
+Buttons / Captions
+
+Inter Medium / SemiBold
+
+Type Scales
+Element
+
+Size
+
+Weight
+
+App Title
+
+28 pt
+
+Bold
+
+Section Header
+
+22 pt
+
+SemiBold
+
+2/6
+
+Element
+
+Size
+
+Weight
+
+Card Title
+
+18 pt
+
+Medium
+
+Body Text
+
+16 pt
+
+Regular
+
+Secondary Text
+
+14 pt
+
+Regular
+
+Caption / Label
+
+12 pt
+
+Medium
+
+5. Component Library
+Below is a design system abstraction to be implemented in Flutter UI using reusable widgets.
+
+5.1 Buttons
+Primary Button
+Background: Primary Blue
+Text: White
+Radius: 12px
+Padding: 16px
+Secondary Button
+Background: Sky Blue
+Border: None
+Text: White
+Radius: 12px
+
+5.2 Cards
+Rounded corners (16px)
+Slight shadow (elevation 2)
+White background
+Area for icons + data + CTA
+
+5.3 Inputs
+Underline or outline style
+Placeholder text neutral grey
+Focus state border in Primary Blue
+
+5.4 Navigation
+Bottom navigation with icons and labels
+Active color Primary Blue
+
+3/6
+
+Inactive neutral: #6B7480
+
+6. Screen Specifications
+6.1 Splash & Onboarding
+Branding large logo with Primary Blue gradient
+Subtle background shapes in Sky Blue and Health Green
+
+6.2 Authentication
+Screens: Login / Signup / Password Recovery
+Email inputs
+Social login buttons with accent color
+Clear CTA at bottom
+
+6.3 Home Dashboard
+Includes:
+Greeting
+Daily health score (big card with progress ring in Health Green)
+Quick access:
+Symptom Checker
+Habit Tracker
+AI Chat Assistant
+Prototype logic:
+Use icons + labels
+White cards elevated with Primary Blue accents
+
+6.4 AI Symptom Checker
+User selects symptoms from a list or types text
+Search bar at top
+Result panel cards with:
+Condition
+Urgency level color bar
+Green = Low
+Blue = Medium
+Purple = Advisory
+Red for urgent (use sparingly)
+
+6.5 Habit Tracker
+Tabbed view for daily logs:
+
+4/6
+
+Sleep
+Water
+Steps
+Mood
+Cards with:
+Progress circles
+CTA + Add log button
+Use Health Green for positive progress bars.
+
+6.6 Insights Screen
+Carousel cards — “Weekly Insights”
+Sections:
+AI Suggestions
+Trend charts (use Sky Blue & Green)
+Comparison with past week
+Charts should be simple line/bar charts.
+
+6.7 AI Chat Assistant
+Full screen chat bubble interface
+User messages right aligned (neutral)
+AI replies left aligned with Soft Purple accent
+Top bar in Primary Blue
+Add simple “Type a message...” input with voice option.
+
+6.8 Reminders
+List with toggles
+Time pickers styled with primary colors
+
+7. Interaction & Motion
+Subtle fade transitions
+Elevation changes on press
+Micro-animations for success states (like check marks)
+
+8. Accessibility Considerations
+Respect WCAG contrast (Primary on white ≥ 4.5:1)
+Text scalable for screen readers
+Large tappable touch targets (44px+)
+
+9. Authorization & Error States
+Clear error messages in red (use sparingly)
+
+5/6
+
+Form validation UI with icon + message below input
+
+10. Visual Consistency Rules
+Spacing
+8pt grid baseline
+Standard margins: 16–24px
+
+Iconography
+Line icons in neutral dark
+Accent icons on interactive elements
+
+11. Export & Development Notes
+Prepare Figma tokens for:
+Colors
+Typography
+Elevations
+Component spacing
+In Flutter, convert tokens to:
+ThemeData
+ColorScheme
+TextStyles
+
+12. Roadmap & Future Design Enhancements
+Feature
+
+Next Steps
+
+Health Pairing
+
+Wearable integration UI
+
+Marketplace
+
+Telehealth scheduling
+
+Multilingual support
+
+Font size adaptive themes
+
+Final Result
+This design specification gives you a professional, enterprise-quality UI/UX foundation that
+aligns to healthcare app norms, explains why chosen colors and typography work (trust, calm,
+growth), and guides how to translate your Figma design into a cohesive system for
+implementation.
+If you want, I can turn this into a Figma design token set or a Flutter theme file too. Tell me
+which format you need!
+
+6/6
+
+

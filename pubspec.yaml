@@ -1,0 +1,38 @@
+name: healthmate
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  dio: ^5.9.1
+  fl_chart: ^1.1.1
+  flutter:
+    sdk: flutter
+  flutter_dotenv: ^6.0.0
+  flutter_riverpod: ^3.2.0
+  flutter_svg: ^2.2.3
+  get_it: ^9.2.0
+  go_router: ^17.0.1
+  google_fonts: ^8.0.0
+  intl: ^0.20.2
+  json_annotation: ^4.10.0
+  supabase_flutter: ^2.12.0
+  flutter_local_notifications: ^18.0.1
+  timezone: ^0.10.0
+  shared_preferences: ^2.5.2
+  google_generative_ai: ^0.4.7
+  animate_do: ^3.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - .env
